@@ -19,6 +19,9 @@ output:
 
 - Then, use `xaringan:::inf_mr()` or `knit` the file to check output.
 
+# Example
+https://nanhung.rbind.io/slide/tamu-slide-template.html
+
 ## Reference link
 [1] [Xaringan](https://github.com/yihui/xaringan)  
 [2] [Rladies template](https://alison.rbind.io/slides/rladies-demo-slides.html)  
