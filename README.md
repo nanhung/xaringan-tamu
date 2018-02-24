@@ -1,25 +1,23 @@
-This is the r [xaringan](https://github.com/yihui/xaringan) theme. The color of this is based on [Texas A&M University Brand Color](https://brandguide.tamu.edu/colors.html).
+This is the TAMU theme for R [xaringan](https://github.com/yihui/xaringan) package. It is based on [Texas A&M University University Brand Guide](https://brandguide.tamu.edu/).
+To use this template just clone this repo. You only need to put your slide file (`*.Rmd`) and the template css (`tamu.css`, `tamu-fonts.css`) in the same folder.
 
-# Installation
-a. To use this template, you just need to put your slide file (`*.Rmd`) and the template css (`tamu.css`, `tamu-fonts.css`) in the same folder.
-b. Define the `yaml` in your `Rmd` file. Here is the example:  
+Set the YAML metadata in `Rmd` file, e.g.:
 
-``` yaml
-title: "Presentation Ninja"
-subtitle: "⚔<br/>with xaringan"
-author: "Yihui Xie"
-date: "2016/12/12"
+```yaml
+---
+title: "TAMU Presentation"
 output:
-  xaringan::moon_reader: 
-    css: ["tamu.css", "tamu-fonts.css"] 
-    lib_dir: libs
+  xaringan::moon_reader:
+    css: ["default", "tamu.css", "tamu-fonts.css"]
     nature:
-      highlightStyle: github
-      highlightLines: true
-      countIncrementalSlides: false
+          highlightLines: true
+---
 ```
-c. Type `xaringan:::inf_mr()` in consloe to see your masterpiece
 
-## Other template repo
-Duke: https://github.com/libjohn/slide-template-dukeu
-Metropolis: https://github.com/pat-s/xaringan-metropolis
+Then, use `xaringan:::inf_mr()` or `knit` the file to check output.
+
+## Reference link
+[1] [xaringan](https://github.com/yihui/xaringan)
+[2] [Rladies template](https://alison.rbind.io/slides/rladies-demo-slides.html)  
+[3] [Duke color template](https://github.com/libjohn/slide-template-dukeu)  
+[4] [Metropolis template](https://github.com/pat-s/xaringan-metropolis)  

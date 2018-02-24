@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TAMU Presentation Template</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Nan-Hung Hsieh" />
+    <link href="tamu-slide-template_files/remark-css/default.css" rel="stylesheet" />
+    <script src="tamu-slide-template_files/htmlwidgets/htmlwidgets.js"></script>
+    <script src="tamu-slide-template_files/jquery/jquery.min.js"></script>
+    <link href="tamu-slide-template_files/leaflet/leaflet.css" rel="stylesheet" />
+    <script src="tamu-slide-template_files/leaflet/leaflet.js"></script>
+    <link href="tamu-slide-template_files/leafletfix/leafletfix.css" rel="stylesheet" />
+    <link href="tamu-slide-template_files/leaflet-label/leaflet.label.css" rel="stylesheet" />
+    <script src="tamu-slide-template_files/leaflet-label/leaflet.label.js"></script>
+    <script src="tamu-slide-template_files/Proj4Leaflet/proj4-compressed.js"></script>
+    <script src="tamu-slide-template_files/Proj4Leaflet/proj4leaflet.js"></script>
+    <script src="tamu-slide-template_files/leaflet-binding/leaflet.js"></script>
+    <link href="tamu-slide-template_files/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
+    <script src="tamu-slide-template_files/datatables-binding/datatables.js"></script>
+    <link href="tamu-slide-template_files/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="tamu-slide-template_files/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="tamu-slide-template_files/dt-core/js/jquery.dataTables.min.js"></script>
+    <link href="tamu-slide-template_files/crosstalk/css/crosstalk.css" rel="stylesheet" />
+    <script src="tamu-slide-template_files/crosstalk/js/crosstalk.min.js"></script>
+    <link rel="stylesheet" href="tamu.css" type="text/css" />
+    <link rel="stylesheet" href="tamu-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# TAMU Presentation Template
+## ⚕<br/>with xaringan
+### Nan-Hung Hsieh
+
+---
+
+
+class: inverse, center, middle
+background-image: url(https://i.imgur.com/VCyLJx2.png)
+background-size: contain
+
+# Let's Get Started!
+
+???
+
+Image credit: [TAMU Brand Guide](https://brandguide.tamu.edu/images/brand-examples/ROI.jpg)
+
+---
+
+
+
+class: inverse, center, middle
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
+
+???
+
+Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
+
+---
+class: inverse, center, middle
+
+# xaringan
+
+### /ʃæ.'riŋ.ɡæn/
+
+---
+
+# Hello **Ninja**
+
+Install the **xaringan** package from [Github](https://github.com/yihui/xaringan):
+
+```r
+devtools::install_github("yihui/xaringan")
+```
+
+--
+
+You are recommended to use the [RStudio IDE](https://www.rstudio.com/products/rstudio/), but you do not have to.
+
+- Create a new R Markdown document from the menu `File -&gt; New File -&gt; R Markdown -&gt; From Template -&gt; Ninja Presentation`;&lt;sup&gt;1&lt;/sup&gt;
+
+--
+
+- Click the `Knit` button to compile it;
+
+--
+
+- or use the [RStudio Addin](https://rstudio.github.io/rstudioaddins/)&lt;sup&gt;2&lt;/sup&gt;; "Infinite Moon Reader" to live preview the slides (every time you update and save the Rmd document, the slides will be automatically reloaded in RStudio Viewer.
+
+.footnote[
+[1] [中文版本](http://slides.yihui.name/xaringan/zh-CN.html)
+
+[2] See [#2](https://github.com/yihui/xaringan/issues/2) if you do not see the template or addin in RStudio.
+]
+
+---
+
+background-image: url(https://brandguide.tamu.edu/downloads/logos/TAM-Logo.svg)
+background-size: 100px
+background-position: 99% 1% 
+
+# TAMU theme
+
+This is the TAMU theme. It is based on [Texas A&amp;M University University Brand Guide](https://brandguide.tamu.edu/). It consists of two CSS files.
+To use this template, go to [xaringan-tamu](https://github.com/nanhung/xaringan-tamu)
+ github repo and clone it. You only need to put your slide file (`*.Rmd`) and the template css (`tamu.css`, `tamu-fonts.css`) in the same folder.
+
+Then, use it in the YAML metadata, e.g.:
+
+```yaml
+---
+title: "TAMU Presentation"
+output:
+  xaringan::moon_reader:
+    css: ["default", "tamu.css", "tamu-fonts.css"]
+    nature:
+          highlightLines: true
+---
+```
+
+---
+
+# That's check some **functions**! 
+
+A **BIG** image and foor note
+
+![](https://brandguide.tamu.edu/images/brand-examples/ROI.jpg)
+
+???
+Image credit: [TAMU Brand Guide](https://brandguide.tamu.edu/images/brand-examples/ROI.jpg)
+
+---
+
+# Foot note
+
+Want to write the foot note? Embed the html script `&lt;sup&gt;1&lt;/sup&gt;` like this&lt;sup&gt;1&lt;/sup&gt;:
+
+```
+.footnote[
+[1] Y. Xie et al., xaringan: Presentation Ninja. 2018.
+]
+```
+
+Also, this template was constructed refer to some examples&lt;sup&gt;2,3,4&lt;/sup&gt;
+
+.footnote[
+[1] Y. Xie et al., xaringan: Presentation Ninja. 2018.  
+[2] [Rladies presentation Ninja](https://alison.rbind.io/slides/rladies-demo-slides.html)  
+[3] [Duke color template](https://www.johnlittle.info/project/custom/slide-template/duke_slide_template.html)  
+[4] [Metropolis template](https://pat-s.github.io/files/xaringan-metropolis.html)  
+]
+
+---
+
+class: center
+
+# Side by Side
+
+.pull-left[
+
+This is **TOP LEFT**
+
+&lt;img src="https://brandguide.tamu.edu/downloads/logos/TAM-LogoBox.png" width="40%"&gt;
+
+This is **BOTTOM LEFT**
+
+&lt;img src="https://brandguide.tamu.edu/downloads/logos/TAM-Logo.png" width="40%"&gt;
+]
+
+.pull-right[
+This is **TOP RIGHT**
+
+&lt;img src="https://brandguide.tamu.edu/downloads/logos/TAM-Logo.png" width="40%"&gt;
+
+This is **BOTTOM RIGHT**
+&lt;img src="https://brandguide.tamu.edu/downloads/logos/TAM-LogoBox.png" width="40%"&gt;
+]
+
+---
+
+
+# Math Expressions
+
+You can write LaTeX math expressions inside a pair of dollar signs, e.g. &amp;#36;\alpha+\beta$ renders `\(\alpha+\beta\)`. You can use the display style with double dollar signs:
+
+```
+$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
+```
+
+`$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$`
+
+Limitations:
+
+1. The source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting `$$` must appear in the very beginning of a line, followed immediately by a non-space character, and the ending `$$` must be at the end of a line, led by a non-space character;
+
+1. There should not be spaces after the opening `$` or before the closing `$`.
+
+1. Math does not work on the title slide (see [#61](https://github.com/yihui/xaringan/issues/61) for a workaround).
+
+---
+
+# R Code
+
+
+```r
+# a boring regression
+fit = lm(dist ~ 1 + speed, data = cars)
+coef(summary(fit))
+```
+
+```
+#               Estimate Std. Error   t value     Pr(&gt;|t|)
+# (Intercept) -17.579095  6.7584402 -2.601058 1.231882e-02
+# speed         3.932409  0.4155128  9.463990 1.489836e-12
+```
+
+```r
+dojutsu = c('地爆天星', '天照', '加具土命', '神威', '須佐能乎', '無限月読')
+grep('天', dojutsu, value = TRUE)
+```
+
+```
+# [1] "地爆天星" "天照"
+```
+
+---
+
+# R Plots
+
+
+```r
+par(mar = c(4, 4, 1, .1))
+plot(cars, pch = 19, col = 'darkgray', las = 1)
+abline(fit, lwd = 2)
+```
+
+![](tamu-slide-template_files/figure-html/cars-1.svg)&lt;!-- --&gt;
+
+---
+
+# Tables
+
+If you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,
+
+
+```r
+knitr::kable(head(iris), format = 'html')
+```
+
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:right;"&gt; Sepal.Length &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sepal.Width &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Petal.Length &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Petal.Width &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Species &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 5.1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.5 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 4.9 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 4.7 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 4.6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.5 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 5.0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 5.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.9 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.7 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.4 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+# HTML Widgets
+
+I have not thoroughly tested HTML widgets against **xaringan**. Some may work well, and some may not. It is a little tricky.
+
+Similarly, the Shiny mode (`runtime: shiny`) does not work. I might get these issues fixed in the future, but these are not of high priority to me. I never turn my presentation into a Shiny app. When I need to demonstrate more complicated examples, I just launch them separately. It is convenient to share slides with other people when they are plain HTML/JS applications.
+
+See the next page for two HTML widgets.
+
+---
+
+
+```r
+library(leaflet)
+leaflet() %&gt;% addTiles() %&gt;% setView(-93.65, 42.0285, zoom = 17)
+```
+
+<div id="htmlwidget-4380e6c213113322667a" style="width:100%;height:432px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4380e6c213113322667a">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}],"setView":[[42.0285,-93.65],17,[]]},"evals":[],"jsHooks":[]}</script>
+
+---
+
+
+```r
+DT::datatable(
+  head(iris, 10),
+  fillContainer = FALSE, options = list(pageLength = 8)
+)
+```
+
+<div id="htmlwidget-5fada5a8038a24670512" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5fada5a8038a24670512">{"x":{"filter":"none","fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10"],[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9],[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1],[1.4,1.4,1.3,1.5,1.4,1.7,1.4,1.5,1.4,1.5],[0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1],["setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Sepal.Length<\/th>\n      <th>Sepal.Width<\/th>\n      <th>Petal.Length<\/th>\n      <th>Petal.Width<\/th>\n      <th>Species<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":8,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[8,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+
+---
+
+# Highlight Lines
+
+- The option `highlightLines: true` of `nature` will highlight code lines that start with `*`, or are wrapped in `{{ }}`, or have trailing comments `#&lt;&lt;`;
+
+    ```yaml
+    output:
+      xaringan::moon_reader:
+        nature:
+          highlightLines: true
+    ```
+
+    See examples on the next page.
+
+---
+
+# Highlight Lines
+
+.pull-left[
+An example using a leading `*`:
+
+    ```r
+    if (TRUE) {
+    ** message("Very important!")
+    }
+    ```
+Output:
+```r
+if (TRUE) {
+* message("Very important!")
+}
+```
+
+This is invalid R code, so it is a plain fenced code block that is not executed.
+]
+
+.pull-right[
+An example using `{{}}`:
+
+    ```{r tidy=FALSE}
+    if (TRUE) {
+    *{{ message("Very important!") }}
+    }
+    ```
+Output:
+
+```r
+if (TRUE) {
+* message("Very important!") 
+}
+```
+
+```
+## Very important!
+```
+
+It is valid R code so you can run it. Note that `{{}}` can wrap an R expression of multiple lines.
+]
+
+---
+
+# Highlight Lines
+
+An example of using the trailing comment `#&lt;&lt;` to highlight lines:
+
+````markdown
+```{r tidy=FALSE}
+library(ggplot2)
+ggplot(mtcars) + 
+  aes(mpg, disp) + 
+  geom_point() +   #&lt;&lt;
+  geom_smooth()    #&lt;&lt;
+```
+````
+
+Output:
+
+
+```r
+library(ggplot2)
+ggplot(mtcars) + 
+  aes(mpg, disp) + 
+* geom_point() +
+* geom_smooth()
+```
+
+Want to learn more functions? [Click here!](https://slides.yihui.name/xaringan/incremental.html)
+
+---
+
+# Themes
+
+Don't want to learn CSS? Okay, you can use some user-contributed themes. A theme typically consists of two CSS files `foo.css` and `foo-fonts.css`, where `foo` is the theme name. Below are some existing themes: 
+
+
+```r
+names(xaringan:::list_css())
+```
+
+```
+## [1] "default-fonts"    "default"          "hygge"           
+## [4] "metropolis-fonts" "metropolis"       "rladies-fonts"   
+## [7] "rladies"
+```
+
+To use a theme, you can specify the `css` option as an array of CSS filenames (without the `.css` extensions), e.g.,
+
+```yaml
+
+output:
+  xaringan::moon_reader:
+    css: [default, metropolis, metropolis-fonts] 
+    
+```
+
+If you want to contribute a theme to **xaringan**, please read [this blog post](https://yihui.name/en/2017/10/xaringan-themes). 
+
+---
+
+class: center, middle
+background-image: url(https://i.imgur.com/zsuAm7i.png)
+background-size: contain
+
+# Thanks!
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+
+???
+
+Image credit: [TAMU Brand Guide](https://brandguide.tamu.edu/images/brand-examples/ROI.jpg)
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightLines": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
