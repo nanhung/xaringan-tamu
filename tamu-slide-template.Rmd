@@ -24,6 +24,9 @@ Image credit: [TAMU Brand Guide](https://brandguide.tamu.edu/images/brand-exampl
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
+library(ggplot2)
+library(MEMSS)
+library(lattice)
 ```
 
 class: inverse, center, middle
@@ -99,7 +102,7 @@ output:
 
 # That's check some **functions**! 
 
-A **BIG** image and foor note
+A **FULL** image
 
 ![](https://brandguide.tamu.edu/images/brand-examples/ROI.jpg)
 
@@ -158,21 +161,18 @@ This is **BOTTOM RIGHT**
 
 # Math Expressions
 
-You can write LaTeX math expressions inside a pair of dollar signs, e.g. &#36;\alpha+\beta$ renders $\alpha+\beta$. You can use the display style with double dollar signs:
+You can write LaTeX math expressions inside a pair of dollar signs. You can use the display style with double dollar signs. This is the [Hill equation](https://en.wikipedia.org/wiki/Hill_equation_(biochemistry):
 
 ```
-$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
+$$\theta=\frac{[L^n]}{k_d+[L]^n}$$
 ```
 
-$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
+$$\theta=\frac{[L^n]}{k_d+[L]^n}$$
 
-Limitations:
-
-1. The source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting `$$` must appear in the very beginning of a line, followed immediately by a non-space character, and the ending `$$` must be at the end of a line, led by a non-space character;
-
-1. There should not be spaces after the opening `$` or before the closing `$`.
-
-1. Math does not work on the title slide (see [#61](https://github.com/yihui/xaringan/issues/61) for a workaround).
+where  
+- $\theta$ is the fraction of the receptor protein concentration that is bound to ligand.  
+- $[L]$ is the free (unbound) ligand concentration.  
+- $k_d$ is the apparent dissociation constant derived from the law of mass action (the equilibrium constant for dissociation). 
 
 ---
 
@@ -182,54 +182,65 @@ Limitations:
 # a boring regression
 fit = lm(dist ~ 1 + speed, data = cars)
 coef(summary(fit))
-dojutsu = c('地爆天星', '天照', '加具土命', '神威', '須佐能乎', '無限月読')
-grep('天', dojutsu, value = TRUE)
+```
+
+
+### Use the quote? No problem!
+> "I came; I saw; I conquered"
+
+```{r}
+dojutsu = c('VENI', 'VIDI', 'VICI')
+grep('VI', dojutsu, value = TRUE)
 ```
 
 ---
 
 # R Plots
 
-```{r cars, fig.height=4, dev='svg'}
-par(mar = c(4, 4, 1, .1))
-plot(cars, pch = 19, col = 'darkgray', las = 1)
-abline(fit, lwd = 2)
+```{r, fig.height=3, dev='svg'}
+ggplot(NULL, aes(x = 1, y = 1)) +
+  annotate("text", 1, 1, label = 'GiG\'EM AGGIES!', color = "#500000",
+           fontface = "bold", size = 12)+
+  theme(axis.title = element_blank(), axis.ticks = element_blank(),
+           axis.text = element_blank())
 ```
 
 ---
 
-# Tables
+# Pharmacokinetics - Tables
 
 If you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,
 
 ```{r}
-knitr::kable(head(iris), format = 'html')
-```
-
----
-
-# HTML Widgets
-
-I have not thoroughly tested HTML widgets against **xaringan**. Some may work well, and some may not. It is a little tricky.
-
-Similarly, the Shiny mode (`runtime: shiny`) does not work. I might get these issues fixed in the future, but these are not of high priority to me. I never turn my presentation into a Shiny app. When I need to demonstrate more complicated examples, I just launch them separately. It is convenient to share slides with other people when they are plain HTML/JS applications.
-
-See the next page for two HTML widgets.
-
----
-
-```{r out.width='100%', fig.height=6, eval=require('leaflet')}
-library(leaflet)
-leaflet() %>% addTiles() %>% setView(-93.65, 42.0285, zoom = 17)
+knitr::kable(head(MEMSS::Theoph), format = 'html')
 ```
 
 ---
 
 ```{r eval=require('DT'), tidy=FALSE}
 DT::datatable(
-  head(iris, 10),
-  fillContainer = FALSE, options = list(pageLength = 8)
+  head(MEMSS::Theoph, 120),
+  fillContainer = FALSE, options = list(pageLength = 7)
 )
+```
+
+---
+
+# Pharmacokinetics - Plot
+
+```{r, fig.height=4.5, dev='svg'}
+xyplot(conc ~ Time| Subject, data=Theoph, xlab="Time (hr)",
+       auto.key = T,
+       ylab=expression(paste("Plasma concentration, ",mu, "M")), type="b")
+```
+
+---
+
+# HTML Widgets - TAMU Map
+
+```{r out.width='100%', fig.height=6, eval=require('leaflet')}
+library(leaflet)
+leaflet() %>% addTiles() %>% setView(lng = -96.3570, lat = 30.6116, zoom = 12)
 ```
 
 ---
@@ -238,38 +249,14 @@ DT::datatable(
 
 - The option `highlightLines: true` of `nature` will highlight code lines that start with `*`, or are wrapped in `{{ }}`, or have trailing comments `#<<`;
 
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        nature:
-          highlightLines: true
-    ```
-
-    See examples on the next page.
-
----
-
-# Highlight Lines
-
-.pull-left[
-An example using a leading `*`:
-
-    ```r
-    if (TRUE) {
-    ** message("Very important!")
-    }
-    ```
-Output:
-```r
-if (TRUE) {
-* message("Very important!")
-}
+```yaml
+output:
+  xaringan::moon_reader:
+    nature:
+    highlightLines: true
 ```
 
-This is invalid R code, so it is a plain fenced code block that is not executed.
-]
-
-.pull-right[
+.pull-left[
 An example using `{{}}`:
 
     `r ''````{r tidy=FALSE}
@@ -277,6 +264,10 @@ An example using `{{}}`:
     *{{ message("Very important!") }}
     }
     ```
+]
+
+.pull-right[
+
 Output:
 ```{r tidy=FALSE}
 if (TRUE) {
@@ -284,58 +275,21 @@ if (TRUE) {
 }
 ```
 
-It is valid R code so you can run it. Note that `{{}}` can wrap an R expression of multiple lines.
 ]
 
 ---
 
-# Highlight Lines
+class: middle
 
-An example of using the trailing comment `#<<` to highlight lines:
-
-````markdown
-`r ''````{r tidy=FALSE}
-library(ggplot2)
-ggplot(mtcars) + 
-  aes(mpg, disp) + 
-  geom_point() +   #<<
-  geom_smooth()    #<<
-```
-````
-
-Output:
-
-```{r tidy=FALSE, eval=FALSE}
-library(ggplot2)
-ggplot(mtcars) + 
-  aes(mpg, disp) + 
-  geom_point() +   #<<
-  geom_smooth()    #<<
-```
-
-Want to learn more functions? [Click here!](https://slides.yihui.name/xaringan/incremental.html)
+# Want to learn more functions? 
+# [Click here!](https://slides.yihui.name/xaringan/incremental.html)
 
 ---
 
-# Themes
+class: middle
 
-Don't want to learn CSS? Okay, you can use some user-contributed themes. A theme typically consists of two CSS files `foo.css` and `foo-fonts.css`, where `foo` is the theme name. Below are some existing themes: 
-
-```{r}
-names(xaringan:::list_css())
-```
-
-To use a theme, you can specify the `css` option as an array of CSS filenames (without the `.css` extensions), e.g.,
-
-```yaml
-
-output:
-  xaringan::moon_reader:
-    css: [default, metropolis, metropolis-fonts] 
-    
-```
-
-If you want to contribute a theme to **xaringan**, please read [this blog post](https://yihui.name/en/2017/10/xaringan-themes). 
+# If you want to contribute a theme to **xaringan**, 
+# please read [this blog post](https://yihui.name/en/2017/10/xaringan-themes). 
 
 ---
 
@@ -343,7 +297,7 @@ class: center, middle
 background-image: url(https://i.imgur.com/zsuAm7i.png)
 background-size: contain
 
-# Thanks!
+# **Thanks!**
 
 Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
 
