@@ -115,7 +115,7 @@ Image credit: [TAMU Brand Guide](https://brandguide.tamu.edu/images/brand-exampl
 
 Want to write the foot note? Embed the html script `<sup>1</sup>` like this<sup>1</sup>:
 
-```
+```r
 .footnote[
 [1] Y. Xie et al., xaringan: Presentation Ninja. 2018.
 ]
@@ -153,6 +153,7 @@ This is **TOP RIGHT**
 <img src="https://brandguide.tamu.edu/downloads/logos/TAM-Logo.png" width="40%">
 
 This is **BOTTOM RIGHT**
+
 <img src="https://brandguide.tamu.edu/downloads/logos/TAM-LogoBox.png" width="40%">
 ]
 
@@ -163,7 +164,7 @@ This is **BOTTOM RIGHT**
 
 You can write LaTeX math expressions inside a pair of dollar signs. You can use the display style with double dollar signs. This is the [Hill equation](https://en.wikipedia.org/wiki/Hill_equation_(biochemistry):
 
-```
+```r
 $$\theta=\frac{[L^n]}{k_d+[L]^n}$$
 ```
 
