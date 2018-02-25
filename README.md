@@ -19,11 +19,23 @@ output:
 
 - Then, use `xaringan:::inf_mr()` or `knit` the file to check output.
 
+- Not the GitHub User? **No Problem**! Now, It's a built-in theme. Just simply revise the YAML:
+
+```yaml
+---
+output:
+  xaringan::moon_reader:
+    css: ["default", "tamu", "tamu-fonts"]
+    nature:
+          highlightLines: true
+---
+```
+
 # Example
 https://nanhung.rbind.io/slide/tamu-slide-template.html
 
 ## Reference link
 [1] [Xaringan](https://github.com/yihui/xaringan)  
-[2] [Rladies template](https://alison.rbind.io/slides/rladies-demo-slides.html)  
+[2] [R-Ladies template](https://alison.rbind.io/slides/rladies-demo-slides.html)  
 [3] [Duke color template](https://github.com/libjohn/slide-template-dukeu)  
 [4] [Metropolis template](https://github.com/pat-s/xaringan-metropolis)  

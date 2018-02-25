@@ -47,7 +47,9 @@ class: inverse, center, middle
 
 # Hello **Ninja**
 
-Install the **xaringan** package from [Github](https://github.com/yihui/xaringan):
+Xaringan is developed by Yihui Xie, the software engineer in [RStudio](https://www.rstudio.com).
+
+You can install **xaringan** package from R CRAN or the latest version in [Github](https://github.com/yihui/xaringan)
 
 ```r
 devtools::install_github("yihui/xaringan")
@@ -57,7 +59,7 @@ devtools::install_github("yihui/xaringan")
 
 You are recommended to use the [RStudio IDE](https://www.rstudio.com/products/rstudio/), but you do not have to.
 
-- Create a new R Markdown document from the menu `File -> New File -> R Markdown -> From Template -> Ninja Presentation`;<sup>1</sup>
+- Create a new R Markdown document from the menu `File -> New File -> R Markdown -> From Template -> Ninja Presentation`
 
 --
 
@@ -68,12 +70,27 @@ You are recommended to use the [RStudio IDE](https://www.rstudio.com/products/rs
 - or use the [RStudio Addin](https://rstudio.github.io/rstudioaddins/)<sup>2</sup>; "Infinite Moon Reader" to live preview the slides (every time you update and save the Rmd document, the slides will be automatically reloaded in RStudio Viewer.
 
 .footnote[
-[1] [中文版本](http://slides.yihui.name/xaringan/zh-CN.html)
-
-[2] See [#2](https://github.com/yihui/xaringan/issues/2) if you do not see the template or addin in RStudio.
+[1] See [#2](https://github.com/yihui/xaringan/issues/2) if you do not see the template or addin in RStudio.
 ]
 
 ---
+
+# Why xaringan?
+
+- **Free** and Open Source (Slides are composed in R Markdown)
+
+- Version control
+
+- Portable and easily share (Web-based slide)
+
+- Easily print to PDF from Chrome
+
+- [**Repoducibe**](Reproducibility) research result
+
+.right[![Right-aligned image](http://phdcomics.com/comics/archive/phd031214s.gif)]
+
+---
+layout: true
 
 background-image: url(https://brandguide.tamu.edu/downloads/logos/TAM-Logo.svg)
 background-size: 100px
@@ -81,8 +98,12 @@ background-position: 99% 1%
 
 # TAMU theme
 
-This is the TAMU theme. It is based on [Texas A&M University University Brand Guide](https://brandguide.tamu.edu/). It consists of two CSS files.
-To use this template, go to [xaringan-tamu](https://github.com/nanhung/xaringan-tamu)
+---
+
+# 
+
+The TAMU theme is based on [Texas A&M University University Brand Guide](https://brandguide.tamu.edu/). It consists of two CSS files.
+To use this template (the latest version), go to [xaringan-tamu](https://github.com/nanhung/xaringan-tamu)
  github repo and clone it. You only need to put your slide file (`*.Rmd`) and the template css (`tamu.css`, `tamu-fonts.css`) in the same folder.
 
 Then, use it in the YAML metadata, e.g.:
@@ -92,13 +113,28 @@ Then, use it in the YAML metadata, e.g.:
 title: "TAMU Presentation"
 output:
   xaringan::moon_reader:
-    css: ["default", "tamu.css", "tamu-fonts.css"]
+*    css: ["default", "tamu.css", "tamu-fonts.css"]
     nature:
           highlightLines: true
 ---
 ```
-
 ---
+
+Not the GitHub User? **No Problem**!
+
+Now, It's a built-in theme. Just simply revise the YAML:
+
+```yaml
+---
+output:
+  xaringan::moon_reader:
+*    css: ["default", "tamu", "tamu-fonts"]
+    nature:
+          highlightLines: true
+---
+```
+---
+layout: false
 
 # That's check some **functions**! 
 
@@ -110,6 +146,13 @@ A **FULL** image
 Image credit: [TAMU Brand Guide](https://brandguide.tamu.edu/images/brand-examples/ROI.jpg)
 
 ---
+
+# **Look Good?**
+
+<center><iframe src="https://giphy.com/embed/3ohzdP7FK3kyYgdWes" width="480" height="271" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/tamu-high-five-texas-am-3ohzdP7FK3kyYgdWes">via GIPHY</a></p></center>
+
+---
+
 
 # Foot note
 
@@ -125,7 +168,7 @@ Also, this template was constructed refer to some examples<sup>2,3,4</sup>
 
 .footnote[
 [1] Y. Xie et al., xaringan: Presentation Ninja. 2018.  
-[2] [Rladies presentation Ninja](https://alison.rbind.io/slides/rladies-demo-slides.html)  
+[2] [R-Ladies presentation Ninja](https://alison.rbind.io/slides/rladies-demo-slides.html)  
 [3] [Duke color template](https://www.johnlittle.info/project/custom/slide-template/duke_slide_template.html)  
 [4] [Metropolis template](https://pat-s.github.io/files/xaringan-metropolis.html)  
 ]
@@ -246,6 +289,12 @@ leaflet() %>% addTiles() %>% setView(lng = -96.3570, lat = 30.6116, zoom = 12)
 
 ---
 
+[**Show PDF**](https://research.google.com/pubs/archive/44678.pdf)
+
+<iframe src="https://research.google.com/pubs/archive/44678.pdf"
+   width="800px" height="500px" >
+
+---
 # Highlight Lines
 
 - The option `highlightLines: true` of `nature` will highlight code lines that start with `*`, or are wrapped in `{{ }}`, or have trailing comments `#<<`;
@@ -279,21 +328,19 @@ if (TRUE) {
 ]
 
 ---
-
 class: middle
 
 # Want to learn more functions? 
 # [Click here!](https://slides.yihui.name/xaringan/incremental.html)
 
 ---
-
 class: middle
 
 # If you want to contribute a theme to **xaringan**, 
 # please read [this blog post](https://yihui.name/en/2017/10/xaringan-themes). 
 
 ---
-
+layout: false
 class: center, middle
 background-image: url(https://i.imgur.com/zsuAm7i.png)
 background-size: contain

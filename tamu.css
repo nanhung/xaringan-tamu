@@ -11,7 +11,7 @@ a, a > code {
   font-size: 60%;
 }
 
-.remark-code-line-highlighted     { background-color: fce300 ; }
+.remark-code-line-highlighted     { background-color: #fce300 ; }
 
 .remark-slide-content {
   border-top: 8px solid #500000;
