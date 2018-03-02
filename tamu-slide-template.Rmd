@@ -175,6 +175,24 @@ Also, this template was constructed refer to some examples<sup>2,3,4</sup>
 
 ---
 
+# Font size
+
+This is normal font size
+
+Use `.large[]` to use .large[large font]
+
+Use `.small[]` to use .small[small font]
+
+<br/>
+
+Also, you can try this trick
+
+Use `.large[large[]]` to use .large[.large[**extra large font**]]
+
+Use `.small[small[]]` to use .small[.small[**tiny font**]]
+
+---
+
 class: center
 
 # Side by Side
@@ -288,13 +306,6 @@ leaflet() %>% addTiles() %>% setView(lng = -96.3570, lat = 30.6116, zoom = 12)
 ```
 
 ---
-
-[**Show PDF**](https://research.google.com/pubs/archive/44678.pdf)
-
-<iframe src="https://research.google.com/pubs/archive/44678.pdf"
-   width="800px" height="500px" >
-
----
 # Highlight Lines
 
 - The option `highlightLines: true` of `nature` will highlight code lines that start with `*`, or are wrapped in `{{ }}`, or have trailing comments `#<<`;
@@ -341,14 +352,8 @@ class: middle
 
 ---
 layout: false
-class: center, middle
-background-image: url(https://i.imgur.com/zsuAm7i.png)
-background-size: contain
+class: inverse, center, middle
 
 # **Thanks!**
 
 Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
-
-???
-
-Image credit: [TAMU Brand Guide](https://brandguide.tamu.edu/images/brand-examples/ROI.jpg)

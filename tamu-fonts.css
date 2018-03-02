@@ -10,3 +10,18 @@ h1, h2, h3 { font-family: 'Yanone Kaffeesatz'; }
   font-family: 'Inconsolata', 'Lucida Console', Monaco, monospace; color: #500000; 
   background-color: #f3f3f3;  font-size: 90%; 
 }
+
+.large {
+  font-size: 120%;
+}
+
+.small {
+  font-size: 80%;
+}
+
+.footnote {
+  position: absolute;
+  bottom: 3em;
+  padding-right: 4em;
+  font-size: 60%;
+}
