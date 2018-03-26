@@ -42,9 +42,11 @@ table {
 }
 
 .shrink {
+  margin: auto;
   width: 90%;
 }
 
 .enlarge{
+  margin: auto;
   width: 110%;
 }

@@ -140,10 +140,10 @@ layout: false
 
 A **FULL** image
 
-![](https://brandguide.tamu.edu/images/brand-examples/ROI.jpg)
+![](https://brandguide.tamu.edu/assets/img/landing-page/ourbrand.jpg)
 
 ???
-Image credit: [TAMU Brand Guide](https://brandguide.tamu.edu/images/brand-examples/ROI.jpg)
+Image credit: [TAMU Brand Guide](https://brandguide.tamu.edu/assets/img/landing-page/ourbrand.jpg)
 
 ---
 
@@ -199,24 +199,46 @@ class: center
 
 .pull-left[
 
-This is **TOP LEFT**
+### TAM Logo Box
 
-<img src="https://brandguide.tamu.edu/downloads/logos/TAM-LogoBox.png" width="40%">
+<img src="https://brandguide.tamu.edu/assets/downloads/logos/TAM-LogoBox.png" width="40%">
 
-This is **BOTTOM LEFT**
+### TAM Logo
 
-<img src="https://brandguide.tamu.edu/downloads/logos/TAM-Logo.png" width="40%">
+<img src="https://brandguide.tamu.edu/assets/downloads/logos/TAM-Logo.png" width="40%">
 ]
 
 .pull-right[
-This is **TOP RIGHT**
 
-<img src="https://brandguide.tamu.edu/downloads/logos/TAM-Logo.png" width="40%">
+### TAM Logo
 
-This is **BOTTOM RIGHT**
+<img src="https://brandguide.tamu.edu/assets/downloads/logos/TAM-Logo.png" width="40%">
 
-<img src="https://brandguide.tamu.edu/downloads/logos/TAM-LogoBox.png" width="40%">
+### TAM Logo Box
+
+<img src="https://brandguide.tamu.edu/assets/downloads/logos/TAM-LogoBox.png" width="40%">
 ]
+
+---
+
+# Image size
+
+Use `.shrink[]` to shrink the image
+
+.shrink[
+![](https://brandguide.tamu.edu/assets/img/landing-page/ourbrand.jpg)
+]
+
+---
+
+# Image size
+
+Use `.enlarge[]` to enlarge the image
+
+.enlarge[
+![](https://brandguide.tamu.edu/assets/img/landing-page/ourbrand.jpg)
+]
+
 
 ---
 
