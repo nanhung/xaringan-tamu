@@ -2,6 +2,15 @@ a, a > code {
   color: #e4002b;
   font-weight: bold;
   text-decoration: none;
+  transition: all .2s ease-in-out
+}
+
+a:hover {
+    font-size: 1.2em;
+}
+
+.remark-slide-number {
+  font-size: 0.6em;
 }
 
 .remark-code-line-highlighted     { background-color: #fce300 ; }
@@ -16,6 +25,13 @@ a, a > code {
   font-weight: normal;
   margin-top: 10px;
   margin-left: -00px;
+}
+
+.remark-slide-content > h2, .pull-left > h2, .pull-right > h2 {
+  font-size: 35px;
+}
+.remark-slide-content > h3, .pull-left > h3, .pull-right > h3 {
+  font-size: 25px;
 }
 
 h1, h2, h3 {
