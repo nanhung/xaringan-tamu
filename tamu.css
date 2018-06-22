@@ -1,19 +1,16 @@
 a, a > code {
-  color: #e4002b;
+  color: #2b5d7d;
   font-weight: bold;
+  border-bottom: 1px dotted #2b5d7d;
   text-decoration: none;
   transition: all .2s ease-in-out
 }
 
-a:hover {
-    font-size: 1.2em;
-}
+a:hover { font-size: 1.1em; }
 
-.remark-slide-number {
-  font-size: 0.6em;
-}
+.remark-slide-number { font-size: 0.6em; }
 
-.remark-code-line-highlighted     { background-color: #fce300 ; }
+.remark-code-line-highlighted { background-color: #fce300 ; }
 
 .remark-slide-content {
   border-right: 11px solid #500000;
