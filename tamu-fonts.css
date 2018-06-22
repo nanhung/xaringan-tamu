@@ -1,23 +1,21 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import url(https://fonts.googleapis.com/css?family=Oswald);
-@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700');
+@import url(https://fonts.googleapis.com/css?family=Inconsolata);
 
-body { font-family: 'Open Sans', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif; }
+body { font-family: 'Open Sans'; }
 
 h1, h2, h3 { font-family: 'Oswald'; }
 
 .remark-code, .remark-inline-code { 
-  font-family: 'Inconsolata', 'Lucida Console', Monaco, monospace; color: #500000; 
+  font-family: 'Inconsolata'; color: #500000; 
   background-color: #f3f3f3;  font-size: 90%; 
 }
 
-.large {
-  font-size: 120%;
-}
+.bolder { font-weight: bolder; color: #e4002b; }
 
-.small {
-  font-size: 80%;
-}
+.large { font-size: 120%; }
+
+.small { font-size: 80%; }
 
 .footnote {
   position: absolute;
