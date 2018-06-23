@@ -6,7 +6,10 @@ a, a > code {
   transition: all .2s ease-in-out
 }
 
-a:hover { font-size: 1.1em; }
+a:hover { 
+  font-size: 1.05em; 
+  border-bottom: 1px solid #2b5d7d;
+}
 
 .remark-slide-number { font-size: 0.6em; }
 
