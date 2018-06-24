@@ -57,6 +57,10 @@ table {
   border-bottom: 1px solid #666;
 }
 
+.center {
+  align-content: center;  
+}
+
 .shrink {
   margin: auto;
   width: 90%;
