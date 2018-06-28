@@ -11,6 +11,10 @@ a:hover {
   border-bottom: 1px solid #2b5d7d;
 }
 
+.highlight {
+    background-color: rgba(252,227,0,.2);
+}
+
 .remark-slide-number { font-size: 0.6em; }
 
 .remark-code-line-highlighted { background-color: #fce300 ; }
@@ -59,6 +63,14 @@ table {
 
 .center {
   align-content: center;  
+}
+
+.right {
+  align-content: right;  
+}
+
+.left {
+  align-content: left;  
 }
 
 .shrink {
